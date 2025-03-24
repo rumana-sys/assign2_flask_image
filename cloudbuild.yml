@@ -11,11 +11,11 @@ steps:
 
   # Build the Docker image from current directory
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'rumanak/khanam-flask-backend-app:v1', '.']
+    args: ['build', '-t', 'rumanak/khanam-flask-backend-app:v2', '.']
 
   # Push the image to Docker Hub
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'rumanak/khanam-flask-backend-app:v1']
+    args: ['push', 'rumanak/khanam-flask-backend-app:v2']
 
   # Update Compute Engine with the new container image
   - name: 'gcr.io/cloud-builders/gcloud'
@@ -25,13 +25,13 @@ steps:
       - 'update-container'
       - 'flask-instance'
       - '--zone=us-central1-a'
-      - '--container-image=rumanak/khanam-flask-backend-app:v1'
+      - '--container-image=rumanak/khanam-flask-backend-app:v2'
 
 options:
   logging: CLOUD_LOGGING_ONLY
 
 images:
-  - 'rumanak/khanam-flask-backend-app:v1'
+  - 'rumanak/khanam-flask-backend-app:v2'
 
 availableSecrets:
   secretManager:
