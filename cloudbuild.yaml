@@ -35,5 +35,5 @@ images:
 
 availableSecrets:
   secretManager:
-    - versionName: projects/rumana78656/secrets/docker-hub-password/versions/latest
+    - versionName: projects/739017050206/secrets/docker-hub-password/versions/latest
       env: 'DOCKER_HUB_PASSWORD'
