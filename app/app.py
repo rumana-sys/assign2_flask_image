@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    build_version = os.environ.get('CLOUD_BUILD_VERSION', 'Unknown')
+    build_version = os.environ.get('CLOUD_BUILD_VERSION')
     return f"""
     <html>
         <head>
@@ -13,7 +13,7 @@ def home():
         </head>
         <body>
             <h1>Hello Cloud!</h1>
-            <p><strong>CloudBuild Version: {build_version}</strong></p>
+            <p><strong>CloudBuild VERSION: {build_version}</strong></p>
         </body>
     </html>
     """
