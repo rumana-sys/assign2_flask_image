@@ -11,7 +11,7 @@ steps:
 
   # Build the Docker image from current directory
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'rumanak/khanam-flask-backend-app:latest', '../myapp']
+    args: ['build', '-t', 'rumanak/khanam-flask-backend-app:latest', '../app']
 
   # Push the image to Docker Hub
   - name: 'gcr.io/cloud-builders/docker'
