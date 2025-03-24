@@ -23,7 +23,7 @@ steps:
       - 'compute'
       - 'instances'
       - 'update-container'
-      - 'flask-instance'
+      - 'khanam-app-server'
       - '--zone=us-central1-a'
       - '--container-image=rumanak/khanam-flask-backend-app:latest'
 
